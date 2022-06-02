@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './font.scss';
+@import './timeline.scss';
 
 
 @mixin card-style {
@@ -14,12 +15,32 @@
     }
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     @include font-primary;
 }
 
-p {
+p,
+.paragraph-color {
     color: $paragraph;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        background: url('../img/check.svg') no-repeat left top 3px;
+        background-size: 1.25rem;
+        padding-left: 2rem;
+    }
+}
+
+.black-text {
+    color: $black-text;
 }
 
 .z-index {
@@ -454,6 +475,10 @@ footer {
 
     .pointer {
         cursor: pointer;
+    }
+
+    .mw-md-60 {
+        max-width: 60%;
     }
     /*--End Utilities--*/
 }
